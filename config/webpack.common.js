@@ -5,7 +5,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const WriteFilePlugin = require('write-file-webpack-plugin');
 
 const config = {
-  entry: ['babel-polyfill', './src/index.js'],
+  entry: './src/index.js',
   module: {
     rules: [
       {
