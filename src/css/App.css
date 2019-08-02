@@ -1,66 +1,62 @@
-body {
-  background: #eceff1;
-  color: rgba(0, 0, 0, 0.87);
-  font-family: Roboto, Helvetica, Arial, sans-serif;
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 20vh 80vh 100vh 100vh 100vh 50vh;
+  grid-template-areas:
+    '. navbar navbar navbar navbar .'
+    '. introduction introduction introduction introduction .'
+    '. whoami whoami whoami whoami .'
+    '. languages languages languages languages .'
+    '. work work work work .'
+    '. findme findme findme findme .';
+}
+
+.navbar-container {
+  grid-area: navbar;
+}
+
+.introduction-container {
+  grid-area: introduction;
+}
+
+.whoami-container {
+  grid-area: whoami;
+}
+
+.languages-container {
+  grid-area: languages;
+}
+
+.work-container {
+  grid-area: work;
+}
+
+.findme-container {
+  grid-area: findme;
+  position: relative;
+}
+
+.findme-creator {
+  position: absolute;
+  bottom: 0;
+  font-size: 12px;
+}
+
+.navbar-container ul {
+  list-style-type: none;
   margin: 0;
   padding: 0;
+  overflow: hidden;
 }
-#message {
-  background: white;
-  max-width: 360px;
-  margin: 100px auto 16px;
-  padding: 32px 24px;
-  border-radius: 3px;
+
+.navbar-container li {
+  float: left;
+  width: 20%;
 }
-#message h2 {
-  color: #ffa100;
-  font-weight: bold;
-  font-size: 16px;
-  margin: 0 0 8px;
-}
-#message h1 {
-  font-size: 22px;
-  font-weight: 300;
-  color: rgba(0, 0, 0, 0.6);
-  margin: 0;
-}
-#message h3 {
-  color: rgba(0, 0, 0, 0.6);
-  margin: 4px 0;
-  font-weight: 300;
-}
-#message p {
-  line-height: 140%;
-  margin: 16px 0 24px;
-  font-size: 14px;
-}
-#message a {
+
+.navbar-container li a {
   display: block;
   text-align: center;
-  background: #039be5;
-  text-transform: uppercase;
+  padding: 14px 16px;
   text-decoration: none;
-  color: white;
-  padding: 16px;
-  border-radius: 4px;
-}
-#message,
-#message a {
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-}
-#load {
-  color: rgba(0, 0, 0, 0.4);
-  text-align: center;
-  font-size: 13px;
-}
-@media (max-width: 600px) {
-  body,
-  #message {
-    margin-top: 0;
-    background: white;
-    box-shadow: none;
-  }
-  body {
-    border-top: 16px solid #ffa100;
-  }
 }
