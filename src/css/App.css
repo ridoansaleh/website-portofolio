@@ -42,21 +42,80 @@
   font-size: 12px;
 }
 
-.navbar-container ul {
+.navbar-desktop ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
 }
 
-.navbar-container li {
+.navbar-desktop li {
   float: left;
   width: 20%;
 }
 
-.navbar-container li a {
+.navbar-desktop li a {
   display: block;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
+}
+
+.navbar-mobile {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    margin: 0;
+  }
+  .container {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      'navbar navbar'
+      'introduction introduction'
+      'whoami whoami '
+      'languages languages '
+      'work work'
+      'findme findme';
+  }
+  .introduction-container,
+  .whoami-container,
+  .languages-container,
+  .work-container,
+  .findme-container {
+    margin: 8px;
+  }
+  .navbar-desktop {
+    display: none;
+  }
+  .navbar-mobile {
+    display: block;
+    position: relative;
+    height: 5vh;
+    background-color: black;
+  }
+  .navbar-mobile p {
+    text-align: center;
+    color: aliceblue;
+    margin: 0;
+    line-height: 5vh;
+    /* align-self: start; */
+  }
+  .humburger-icon {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 10vw;
+    height: 5vh;
+    padding: calc(0.7 * 5vh / 4) calc(0.1 * 5vh) 0px calc(0.1 * 5vh);
+    box-sizing: border-box;
+    /* background-color: white; */
+  }
+  .humburger-icon-line {
+    width: 100%;
+    height: calc(0.1 * 5vh);
+    background-color: white;
+    margin-bottom: calc(0.7 * 5vh / 4);
+  }
 }

@@ -6,7 +6,7 @@ class App extends Component {
     return (
       <div className="container">
         <div className="navbar-container">
-          <div>
+          <div className="navbar-desktop">
             <ul>
               <li>
                 <a>RSN</a>
@@ -24,6 +24,14 @@ class App extends Component {
                 <a href="#findme">Find Me</a>
               </li>
             </ul>
+          </div>
+          <div className="navbar-mobile">
+            <p>RSN</p>
+            <div className="humburger-icon">
+              <div className="humburger-icon-line" />
+              <div className="humburger-icon-line" />
+              <div className="humburger-icon-line" />
+            </div>
           </div>
         </div>
         <div id="introduction" className="introduction-container">
@@ -47,10 +55,10 @@ class App extends Component {
           <p>
             I was study Informatic Management at{' '}
             <a href="https://telkomuniversity.ac.id/id/" target="_blank">
-              Telkom Universuty
+              Telkom University
             </a>{' '}
-            in Bandung Indonesia. I graduated in August 2016 and got a my first job in 3 months
-            later. The company's name was <b>OPRENT</b>. Oprent is an online fashion rental based in
+            in Bandung Indonesia. I graduated in August 2016 and got my first job 3 months later.
+            The company's name was <b>OPRENT</b>. Oprent is an online fashion rental based in
             London. But, the tech team was located in Jakarta. I work as a Frontend Developer which
             use Angular.Js (v1.x) as frontend framework.
           </p>
