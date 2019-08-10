@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import '../css/App.css';
+import { TELKOM_UNIVERSITY, LINKEDIN, MEDIUM, TWITTER, GITHUB, STACK_OVERFLOW } from '../constant';
 
 class App extends Component {
   render() {
@@ -15,7 +16,7 @@ class App extends Component {
                 <a href="#whoami">Who am I</a>
               </li>
               <li>
-                <a href="#languages">Languages</a>
+                <a href="#skills">Skills</a>
               </li>
               <li>
                 <a href="#work">Work</a>
@@ -27,11 +28,11 @@ class App extends Component {
           </div>
           <div className="navbar-mobile">
             <p>RSN</p>
-            <div className="humburger-icon">
+            {/* <div className="humburger-icon">
               <div className="humburger-icon-line" />
               <div className="humburger-icon-line" />
               <div className="humburger-icon-line" />
-            </div>
+            </div> */}
           </div>
         </div>
         <div id="introduction" className="introduction-container">
@@ -54,7 +55,7 @@ class App extends Component {
           </p>
           <p>
             I was study Informatic Management at{' '}
-            <a href="https://telkomuniversity.ac.id/id/" target="_blank">
+            <a href={TELKOM_UNIVERSITY} target="_blank">
               Telkom University
             </a>{' '}
             in Bandung Indonesia. I graduated in August 2016 and got my first job 3 months later.
@@ -63,8 +64,8 @@ class App extends Component {
             use Angular.Js (v1.x) as frontend framework.
           </p>
         </div>
-        <div id="languages" className="languages-container">
-          <h1>Languages</h1>
+        <div id="skills" className="skills-container">
+          <h1>Skills</h1>
           <p>
             I have been work for almost 3 years now as a Frontend Developer. These are few
             technologies that i have work with:
@@ -127,31 +128,28 @@ class App extends Component {
           </p>
           <ul>
             <li>
-              <a href="https://www.linkedin.com/in/ridoan-saleh-n-32897385/" target="_blank">
-                LinkedIn
+              <a href={LINKEDIN} target="_blank">
+                <i className="fab fa-linkedin" />
               </a>
             </li>
             <li>
-              <a href="https://medium.com/@ridoansalehnst" target="_blank">
-                Medium
+              <a href={MEDIUM} target="_blank">
+                <i className="fab fa-medium" />
               </a>
             </li>
             <li>
-              <a href="https://twitter.com/Rido67720624" target="_blank">
-                Twitter
+              <a href={TWITTER} target="_blank">
+                <i className="fab fa-twitter" />
               </a>
             </li>
             <li>
-              <a href="https://github.com/ridoansaleh" target="_blank">
-                Github
+              <a href={GITHUB} target="_blank">
+                <i className="fab fa-github" />
               </a>
             </li>
             <li>
-              <a
-                href="https://stackoverflow.com/users/4501402/ridoansaleh?tab=profile"
-                target="_blank"
-              >
-                Stackoverflow
+              <a href={STACK_OVERFLOW} target="_blank">
+                <i className="fab fa-stack-overflow" />
               </a>
             </li>
           </ul>

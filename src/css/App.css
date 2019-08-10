@@ -1,12 +1,16 @@
+body {
+  margin: 0;
+}
+
 .container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 20vh 80vh 100vh 100vh 100vh 50vh;
+  grid-template-rows: 20vh 80vh 100vh 100vh 100vh 35vh;
   grid-template-areas:
-    '. navbar navbar navbar navbar .'
+    'navbar navbar navbar navbar navbar navbar'
     '. introduction introduction introduction introduction .'
     '. whoami whoami whoami whoami .'
-    '. languages languages languages languages .'
+    '. skills skills skills skills .'
     '. work work work work .'
     '. findme findme findme findme .';
 }
@@ -23,8 +27,8 @@
   grid-area: whoami;
 }
 
-.languages-container {
-  grid-area: languages;
+.skills-container {
+  grid-area: skills;
 }
 
 .work-container {
@@ -36,10 +40,11 @@
   position: relative;
 }
 
-.findme-creator {
-  position: absolute;
-  bottom: 0;
-  font-size: 12px;
+.navbar-desktop {
+  padding: 0 10%;
+  background-color: black;
+  position: fixed;
+  width: 100%;
 }
 
 .navbar-desktop ul {
@@ -51,7 +56,7 @@
 
 .navbar-desktop li {
   float: left;
-  width: 20%;
+  width: calc(80% / 5);
 }
 
 .navbar-desktop li a {
@@ -59,10 +64,36 @@
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
+  color: white;
 }
 
 .navbar-mobile {
   display: none;
+}
+
+.findme-container ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.findme-container li {
+  float: left;
+}
+
+.findme-container li a {
+  display: block;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  color: black;
+}
+
+.findme-creator {
+  position: absolute;
+  bottom: 0;
+  font-size: 12px;
 }
 
 @media screen and (max-width: 600px) {
@@ -71,17 +102,18 @@
   }
   .container {
     grid-template-columns: 1fr 1fr;
+    grid-template-rows: 20vh 80vh auto auto auto auto;
     grid-template-areas:
       'navbar navbar'
       'introduction introduction'
       'whoami whoami '
-      'languages languages '
+      'skills skills '
       'work work'
       'findme findme';
   }
   .introduction-container,
   .whoami-container,
-  .languages-container,
+  .skills-container,
   .work-container,
   .findme-container {
     margin: 8px;
@@ -100,7 +132,6 @@
     color: aliceblue;
     margin: 0;
     line-height: 5vh;
-    /* align-self: start; */
   }
   .humburger-icon {
     position: absolute;
@@ -110,12 +141,16 @@
     height: 5vh;
     padding: calc(0.7 * 5vh / 4) calc(0.1 * 5vh) 0px calc(0.1 * 5vh);
     box-sizing: border-box;
-    /* background-color: white; */
   }
   .humburger-icon-line {
     width: 100%;
     height: calc(0.1 * 5vh);
     background-color: white;
     margin-bottom: calc(0.7 * 5vh / 4);
+  }
+  .findme-creator {
+    position: relative;
+    bottom: 0;
+    font-size: 12px;
   }
 }
